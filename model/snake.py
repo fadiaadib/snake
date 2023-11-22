@@ -76,7 +76,7 @@ class TheSnake:
             self.head.setheading(RIGHT)
 
     def check_tail_collision(self):
-        for segment in self.segments[1::]:
-            if segment.distance(self.head) < 0:
+        for segment in self.segments[3::]:
+            if segment.distance(self.head) < 10:
                 return True
         return False

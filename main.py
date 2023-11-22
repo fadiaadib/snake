@@ -51,8 +51,8 @@ class Snake:
 
             # Detect collision with wall and tail
             if self.board.check_collision(self.snake) or self.snake.check_tail_collision():
-                self.score_board.reset_score()
-                self.snake.reset()
+                self.score_board.game_over()
+                on = False
 
 
 if __name__ == '__main__':
