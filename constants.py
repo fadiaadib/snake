@@ -6,20 +6,18 @@ SCORE_FILE = 'score.txt'
 
 # Board
 SCORE_LOCATION = 270
-BOARD_GAP = 30
 
 # Food
 X_BOUNDS = (-250, 250)
 Y_BOUNDS = (-250, 250)
-FOOD_COLOR = 'orange'
-FOOD_SIZE = 0.5
-FOOD_SHAPE = 'circle'
+FOOD_SIZE = 0.3
+FOOD_SHAPE = 'square'
 
 # Turtle
 CONV = 20
 
 # Snake
-SNAKE_INIT_SIZE = 100
+SNAKE_INIT_SIZE = 10
 SNAKE_SIZE = 0.5
 SNAKE_SPEED = 5
 RIGHT = 0
@@ -31,6 +29,7 @@ UP = 90
 BG_COLOR = '#191919'
 FONT_COLOR = '#FFFFFF'
 SNAKE_COLOR = '#FFFFFF'
+FOOD_COLOR = '#03a1fc'
 
 # Time updates
 REFRESH_PERIOD = 0.02
@@ -38,4 +37,4 @@ RESTART_PERIOD = 0.6
 
 # Fonts
 FONT = ('Courier', 18, 'normal')
-BIG_FONT = ('Courier', 36, 'bold')
+BIG_FONT = ('Courier', 36, 'normal')

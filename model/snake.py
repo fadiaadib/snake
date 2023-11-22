@@ -3,6 +3,7 @@ from turtle import Turtle
 from constants import *
 
 from random import choice
+
 COLORS = [
     'red',
     'orange',
@@ -13,12 +14,12 @@ COLORS = [
     'violet'
 ]
 
+
 class TheSnake:
     def __init__(self):
         self.segments = []
         self.create_snake()
-        self.head: Turtle = self.segments[0]
-        self.head.color('orange')
+        self.head = self.segments[0]
 
     def create_snake(self):
         self.expand_snake(SNAKE_INIT_SIZE)
@@ -34,20 +35,20 @@ class TheSnake:
         for _ in range(count):
             segment = Turtle('square')
             segment.shapesize(SNAKE_SIZE, SNAKE_SIZE)
-            # segment.color(SNAKE_COLOR)
-            segment.color(choice(COLORS))
+            segment.color(SNAKE_COLOR)
+            # segment.color(choice(COLORS))
             segment.penup()
 
             if len(self.segments) >= 1:
                 tail_x, tail_y = self.segments[-1].pos()
                 if self.segments[0].heading() == UP:
-                    segment.goto(tail_x, tail_y - SNAKE_SIZE * CONV - 2)
+                    segment.goto(tail_x, tail_y - SNAKE_SIZE * CONV)
                 elif self.segments[0].heading() == DOWN:
-                    segment.goto(tail_x, tail_y + SNAKE_SIZE * CONV + 2)
+                    segment.goto(tail_x, tail_y + SNAKE_SIZE * CONV)
                 elif self.segments[0].heading() == RIGHT:
-                    segment.goto(tail_x - SNAKE_SIZE * CONV - 2, tail_y)
+                    segment.goto(tail_x - SNAKE_SIZE * CONV, tail_y)
                 elif self.segments[0].heading() == LEFT:
-                    segment.goto(tail_x + SNAKE_SIZE * CONV + 2, tail_y)
+                    segment.goto(tail_x + SNAKE_SIZE * CONV, tail_y)
             else:
                 segment.goto(0, 0)
 
