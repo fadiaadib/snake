@@ -10,6 +10,7 @@ from model.score_board import ScoreBoard
 
 
 class Snake:
+    # This class is responsible for the main game logic
     def __init__(self):
         self.screen = Screen()
         self.screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
@@ -29,6 +30,7 @@ class Snake:
         except TclError:
             pass
 
+    # This method is responsible for the key bindings
     def key_bindings(self):
         self.screen.listen()
         self.screen.onkey(self.snake.up, 'Up')
@@ -36,6 +38,7 @@ class Snake:
         self.screen.onkey(self.snake.left, 'Left')
         self.screen.onkey(self.snake.right, 'Right')
 
+    # This method is responsible for the main game loop
     def play(self):
         on = True
         while on:
