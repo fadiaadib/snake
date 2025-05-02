@@ -54,6 +54,6 @@ class Snake:
                 self.score_board.game_over()
                 on = False
 
-
+# Run the game
 if __name__ == '__main__':
     Snake()
